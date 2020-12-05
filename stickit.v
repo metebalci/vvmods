@@ -12,8 +12,8 @@
 //   PMOD[9] -> S[5]
 //   PMOD[10] -> S[7]
 
-// CLK: scan input, something around 500 KHz
-// RESET: reset
+// CLK: scan input, something around 400-500 Hz
+// RESET: active-high reset, not very important, displays nothing when asserted
 // VALUE: 32-bit value to show on 8 displays
 // S: Charlieplexing output to connect to PMOD header on Stickit 
 
