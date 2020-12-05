@@ -29,14 +29,15 @@ module stickit(
     reg [2:0] led_next;
     
     // states
-    localparam led1 = 0;
-    localparam led2 = 1;
-    localparam led3 = 2;
-    localparam led4 = 3;
-    localparam led5 = 4;
-    localparam led6 = 5;
-    localparam led7 = 6;
-    localparam led8 = 7;
+    localparam [2:0] 
+        led1 = 0,
+        led2 = 1,
+        led3 = 2,
+        led4 = 3,
+        led5 = 4,
+        led6 = 5,
+        led7 = 6,
+        led8 = 7;
     
     // digits 0 to F
     localparam d0 = 7'bZ000000;
