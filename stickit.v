@@ -24,9 +24,11 @@ module stickit(
     output wire [7:0] S 
     );
     
+    // state regs, scanning each led
     reg [7:0] led;
     reg [7:0] led_next;
     
+    // states
     localparam led1 = 8'b00000001;
     localparam led2 = 8'b00000010;
     localparam led3 = 8'b00000100;
@@ -36,6 +38,7 @@ module stickit(
     localparam led7 = 8'b01000000;
     localparam led8 = 8'b10000000;
     
+    // digits 0 to F
     localparam d0 = 7'bZ000000;
     localparam d1 = 7'bZZZZ00Z;
     localparam d2 = 7'b0Z00Z00;
@@ -82,6 +85,8 @@ module stickit(
     end
     
     // outputs
+    
+    // sval is part of the value to be displayed on LED currently being scanned 
     reg [3:0] sval;
     
     always @ (*)
