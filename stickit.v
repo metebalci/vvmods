@@ -25,18 +25,18 @@ module stickit(
     );
     
     // state regs, scanning each led
-    reg [7:0] led;
-    reg [7:0] led_next;
+    reg [2:0] led;
+    reg [2:0] led_next;
     
     // states
-    localparam led1 = 8'b00000001;
-    localparam led2 = 8'b00000010;
-    localparam led3 = 8'b00000100;
-    localparam led4 = 8'b00001000;
-    localparam led5 = 8'b00010000;
-    localparam led6 = 8'b00100000;
-    localparam led7 = 8'b01000000;
-    localparam led8 = 8'b10000000;
+    localparam led1 = 0;
+    localparam led2 = 1;
+    localparam led3 = 2;
+    localparam led4 = 3;
+    localparam led5 = 4;
+    localparam led6 = 5;
+    localparam led7 = 6;
+    localparam led8 = 7;
     
     // digits 0 to F
     localparam d0 = 7'bZ000000;
@@ -81,6 +81,7 @@ module stickit(
             led6: led_next = led7;
             led7: led_next = led8;
             led8: led_next = led1;
+            default: led_next = led1;
         endcase
     end
     
